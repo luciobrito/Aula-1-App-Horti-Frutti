@@ -6,20 +6,20 @@ export default function App() {
     
     <View style={estilo.container}>
     <View>
-      <Text style={estilo.titulo, {fontWeight: "bold"}, {fontSize: 30} } > Horti-Fruti Online</Text>
+      <Text style={estilo.titulo} > Horti-Fruti Online</Text>
       </View>
       <ScrollView>
       <View>
       <Text></Text>
-      <Text style={{fontWeight: "bold"}}>Laranja</Text> <Text>R$3/kg</Text>
+      <Text style={estilo.subtitulo}>Laranja</Text> <Text>R$3/kg</Text>
       <Image style={estilo.img} source={require('./assets/laranja.png')} />
-      <Text style={{fontWeight: "bold"}}>Manga</Text> <Text>R$6/kg</Text>
+      <Text style={estilo.subtitulo}>Manga</Text> <Text>R$6/kg</Text>
       <Image style={estilo.img} source={require('./assets/mango.png')} />
-      <Text style={{fontWeight: "bold"}}>Limão-Siciliano</Text> <Text>R$15/kg</Text>
+      <Text style={estilo.subtitulo}>Limão-Siciliano</Text> <Text>R$15/kg</Text>
       <Image style={estilo.img} source={require('./assets/limao.png')} />
-      <Text style={{fontWeight: "bold"}}>Maçã</Text> <Text>R$5/kg</Text>
+      <Text style={estilo.subtitulo}>Maçã</Text> <Text>R$5/kg</Text>
       <Image style={estilo.img} source={require('./assets/maca.png')} />
-      <Text style={{fontWeight: "bold"}}>Melancia</Text> <Text>R$20/un</Text>
+      <Text style={estilo.subtitulo}>Melancia</Text> <Text>R$20/un</Text>
       <Image style={estilo.img} source={require('./assets/melancia.png')} />
     </View>
     </ScrollView>
@@ -36,11 +36,18 @@ const estilo = StyleSheet.create({
   },
   titulo: {
     marginTop:20,
-    fontSize: 50,
+    fontSize: 40,
     color: '#80000',
+    fontWeight: "bold",
+    fontFamily: "Monospace",
   },
   img:{
-    width: 250,
-    height: 200
+    width: "100%",
+    height: 250
+  },
+  subtitulo:{
+    fontWeight: "bold",
+    fontSize: 30,
+    fontFamily: 'Monospace',
   },
 });
